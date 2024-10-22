@@ -37,8 +37,9 @@ public class TPMUNDO extends MundoBase {
     
     NaveDeAtaque naveAliada = new NaveDeAtaque();
     agregar(naveAliada, xNaveAliada, yNaveAliada);
+    agregar(new portal2(), ancho-15, alto-6);
     agregar(new portal(), ancho-2, alto-2);
-    agregar(new portal(), 3, 3);
+    
  
 
     

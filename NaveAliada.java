@@ -46,10 +46,16 @@ public abstract class NaveAliada extends NaveBase {
     }
     
     // AGREGADO PARA PORTAL
-     public void entraralportal() {
+     public void entraralportal(int posX, int posY) {
         actualizarImagen();
         System.out.println("entro al portal gg");
-         setLocation(8, 18);
+         setLocation(posX, posY-1);
+
+    }
+    public void entraralSegundoportal(int posX, int posY) {
+        actualizarImagen();
+        System.out.println("volvio a entrar al portal gg");
+         setLocation(posX, posY-1);
 
     }
 
@@ -151,15 +157,23 @@ public abstract class NaveAliada extends NaveBase {
         consumirCombustible(obtenerConsumoPorMovimiento());
 
         Item item = (Item) getOneObjectAtOffset(0, 0, Item.class);
-        portal portalito = (portal) getOneObjectAtOffset(0, 0, portal.class);
+        portal portalito = (portal) getWorld().getObjects(portal.class).get(0);
+        portal2 portalito2 = (portal2) getWorld().getObjects(portal2.class).get(0);
 
         
         if (item != null) {
             this.cargarCombustible(item.serRecogido());
         }
         // AGREGADO PARA PORTAL
-        if (portalito != null) {
-            this.entraralportal();
+        if (portalito2 != null && this.getX() == portalito2.getX() && this.getY() == portalito2.getY()) {
+            int posX = portalito.getPosicionXPortal1();
+            int posY = portalito.getPosicionYPortal1();
+            this.entraralportal(posX, posY);
+        }
+        if (portalito != null && this.getX() == portalito.getX() && this.getY() == portalito.getY()) {
+            int posX = portalito2.getPosicionXPortal1();
+            int posY = portalito2.getPosicionYPortal1();
+            this.entraralSegundoportal(posX, posY);   
         }
         return true;
     }
