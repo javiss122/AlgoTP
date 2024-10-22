@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Piloto00
+comment1.params=nave
+comment1.target=void\ subirse(NaveDeAtaque)
+comment2.params=
+comment2.target=void\ bajarse()
+comment3.params=
+comment3.target=void\ despegar()
+comment4.params=nave
+comment4.target=void\ maniobrar(NaveDeAtaque)
+comment5.params=casilleros
+comment5.target=void\ avanzarAlNortePor(int)
+comment6.params=direccion
+comment6.target=int\ destruirAsteroideHacia(Direccion)
+comment7.params=
+comment7.target=void\ llegarALaBaseNorte()
+numComments=8
