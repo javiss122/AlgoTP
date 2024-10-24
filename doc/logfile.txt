@@ -1,0 +1,37 @@
+Class documentation
+<---- javadoc command: ---->
+C:\programas\greenfoot\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-protected
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+17
+-classpath
+C:\programas\greenfoot\lib\greenfoot.jar;C:\programas\greenfoot\lib\javafx-base-20.0.1-win.jar;C:\programas\greenfoot\lib\javafx-base-20.0.1.jar;C:\programas\greenfoot\lib\javafx-controls-20.0.1-win.jar;C:\programas\greenfoot\lib\javafx-controls-20.0.1.jar;C:\programas\greenfoot\lib\javafx-fxml-20.0.1-win.jar;C:\programas\greenfoot\lib\javafx-graphics-20.0.1-win.jar;C:\programas\greenfoot\lib\javafx-graphics-20.0.1.jar;C:\programas\greenfoot\lib\javafx-media-20.0.1-win.jar;C:\programas\greenfoot\lib\javafx-media-20.0.1.jar;C:\programas\greenfoot\lib\javafx-swing-20.0.1-win.jar;C:\programas\greenfoot\lib\javafx-web-20.0.1-win.jar;C:\programas\greenfoot\lib\junit-4.12.jar;C:\programas\greenfoot\lib\junit-jupiter-5.5.2.jar;C:\programas\greenfoot\lib\junit-jupiter-api-5.5.2.jar;C:\programas\greenfoot\lib\junit-jupiter-engine-5.5.2.jar;C:\programas\greenfoot\lib\junit-jupiter-params-5.5.2.jar;C:\programas\greenfoot\lib\junit-platform-commons-1.5.2.jar;C:\programas\greenfoot\lib\junit-platform-engine-1.5.2.jar;C:\programas\greenfoot\lib\junit-platform-launcher-1.5.2.jar;C:\programas\greenfoot\lib\junit-platform-suite-api-1.5.2.jar;C:\programas\greenfoot\lib\junit-vintage-engine-5.5.2.jar;C:\programas\greenfoot\lib\hamcrest-core-1.3.jar;C:\programas\greenfoot\lib\opentest4j-1.2.0.jar;C:\programas\greenfoot\lib\bluej.jar;C:\programas\greenfoot\lib\classgraph-4.8.90.jar;C:\programas\greenfoot\lib\diffutils-1.2.1.jar;C:\programas\greenfoot\lib\commons-logging-1.2.jar;C:\programas\greenfoot\lib\jl1.0.1.jar;C:\programas\greenfoot\lib\opencsv-2.3.jar;C:\programas\greenfoot\lib\opencsv-2.4.jar;C:\programas\greenfoot\lib\xom-1.3.7.jar;C:\programas\greenfoot\lib\lang-stride.jar;C:\programas\greenfoot\lib\nsmenufx-2.1.8.jar;C:\programas\greenfoot\lib\wellbehavedfx-0.3.3.jar;C:\programas\greenfoot\lib\guava-17.0.jar;C:\programas\greenfoot\lib\simple-png-0.2.0.jar;C:\programas\greenfoot\lib\simple-png-javafx-0.2.0.jar;C:\programas\greenfoot\lib\httpclient-4.5.13.jar;C:\programas\greenfoot\lib\httpcore-4.4.13.jar;C:\programas\greenfoot\lib\httpmime-4.1.1.jar;C:\programas\greenfoot\lib\javafx\javafx.base.jar;C:\programas\greenfoot\lib\javafx\javafx.controls.jar;C:\programas\greenfoot\lib\javafx\javafx.fxml.jar;C:\programas\greenfoot\lib\javafx\javafx.graphics.jar;C:\programas\greenfoot\lib\javafx\javafx.media.jar;C:\programas\greenfoot\lib\javafx\javafx.properties.jar;C:\programas\greenfoot\lib\javafx\javafx.swing.jar;C:\programas\greenfoot\lib\javafx\javafx.web.jar;C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04
+-d
+C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04\runner.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04\runner.java...
+Constructing Javadoc information...
+warning: unknown enum constant Tag.Any
+  reason: class file for threadchecker.Tag not found
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+warning: unknown enum constant Tag.Any
+Standard Doclet version 17.0.4.1+1
+Building tree for all the packages and classes...
+Generating C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04\doc\runner.html...
+Generating C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04\doc\package-summary.html...
+Generating C:\Users\Derfe\Dropbox\estudio\untref\algo clases\Escenario04\doc\index.html...
+4 warnings
