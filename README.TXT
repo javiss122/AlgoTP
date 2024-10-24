@@ -1,12 +1,6 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
+Tp algo nave espacial
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+Gente aca tienen el escenario completo. La idea es que cada vez que quieran trabajar sobre el lo bajen todo desde aca y lo copien directamente en la carpeta.
+Cuando terminen suban nuevamente todo nuevamente aca y vamos a poder ver que archivos modifico cada uno para que no se vuelva una ensalada dificil de descifrar despues.
+De esta forma son muchos archivos al pedo pero se pueden ver bien los cambios.
+
