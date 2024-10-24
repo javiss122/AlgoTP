@@ -39,8 +39,10 @@ public class TPMUNDO extends MundoBase {
     agregar(naveAliada, xNaveAliada, yNaveAliada);
     agregar(new portal2(), ancho-15, alto-6);
     agregar(new portal(), ancho-2, alto-2);
+    for (int i = 0; i <alto; i++){
+     agregar(new Asteroide(),ancho/2 , alto-1-i);
     
- 
+    }
 
     
     runner naveEnemiga = new runner(Direccion.NORTE);

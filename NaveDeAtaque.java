@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 public class NaveDeAtaque extends NaveAliada implements Atacante {
-
+    
     /**
      * Representa el estado de los motores de la {@link NaveDeAtaque}.
      */

@@ -11,6 +11,8 @@ public class runner extends NaveEnemiga
    
     public runner(Direccion direccion) {
         super(direccion);
+        GreenfootImage nuevaImagen = new GreenfootImage("nave-runner.png");
+        setImage(nuevaImagen);
     }
     
     public void reaccionarAlMoverse() {
