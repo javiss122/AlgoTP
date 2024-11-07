@@ -303,3 +303,8 @@ public boolean hayBarreraHacia(Direccion direccion) {
     public boolean hayBarreraHacia2(Direccion direccion) {
         return super.hayActorHacia(Barrera.class, direccion);
     }
+ public void Barrera ( NaveDeAtaque nave, Direccion direccion){
+        while(! nave.hayBarreraHacia(Direccion.ESTE)){
+            nave.avanzarHacia(direccion);
+        };
+    }
