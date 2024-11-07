@@ -33,6 +33,8 @@ public class TPMUNDO extends MundoBase {
     int yNaveAliada = alto ;
     int xPortal = ancho / 2;
     int yPortal = 3 * alto / 5;
+    int xBarrera = ancho/2;
+    int yBarrera = 9 * alto -1-i);
     int yNaveEnemiga = 4 * alto / 5;
     
     NaveDeAtaque naveAliada = new NaveDeAtaque();
@@ -41,6 +43,10 @@ public class TPMUNDO extends MundoBase {
     agregar(new portal(), ancho-2, alto-2);
     for (int i = 0; i <alto; i++){
      agregar(new Asteroide(),ancho/2 , alto-1-i);
+    
+    }
+    for (int i = 0; i <alto; i++){
+     agregar(new Barrera(),ancho/2 , alto-1-i);
     
     }
 
