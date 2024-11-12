@@ -1,5 +1,6 @@
-//implementacion de ceres el planeta
-//con algo de mision
+//implementacion de ceres el planeta, se mata con 7 ataques
+
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -8,27 +9,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ceres extends ActorBase
+public class Ceres extends ActorBase implements Dañable
 {
     /**
      * {@value #COMBUSTIBLE_CONTENIDO}
      */
     private static final int COMBUSTIBLE_CONTENIDO = 100;
-
+    protected static final int TAMAÑO_MINIMO_DE_Ceres = 10;
+    protected static final int TAMAÑO_MAXIMO_DE_Ceres= 100;
     private double ESCALA_X = 0.9;
     private double ESCALA_Y = 0.9;
     protected int vida;
     private int combustible;
-
+    protected int tamaño;
     public Ceres() {
-        this.vida = 51 + (int) (Math.random() * 50);
+        this.vida = 200 + (int) (Math.random() * 50);
         this.combustible = 0; // Inicializa el combustible en 0
 
     }
 
-    public Ceres(int vida) {
-        this.vida = vida;
-        this.combustible = 0; // Inicializa el combustible en 0
+    /**
+     * Inicializa un Asteroiode con tamaño arbitrario, en el rango de 10 a
+     * {@value #TAMAÑO_MAXIMO_DE_ASTEROIDE} puntos
+     * 
+     * @param tamañoInicial
+     */public Ceres(int tamañoInicial) {
+        this.tamaño = Math.max(TAMAÑO_MINIMO_DE_Ceres , Math.min(TAMAÑO_MAXIMO_DE_Ceres , tamañoInicial));
     }
 
     /**
@@ -111,10 +117,7 @@ public class Ceres extends ActorBase
         actualizarImagen();
     }
 
-    protected int obtenerTamañoMaximo() {
-        return 100;
-    }
-
+    
     private int mision;
     public void verificadorMision(){
         int palentasDestruidos;
@@ -174,9 +177,25 @@ public class Ceres extends ActorBase
         setLocation(getX(), getY() + 1);
     }
 
-    
-    
-    //abstract int obtenerCombustibleMaximo();
+    /**
+     * {@value #TAMAÑO_MAXIMO_DE_ASTEROIDE}
+     * 
+     * @return el tamaño máximo que puede tener un Asteroide
+     */
+    protected int obtenerTamañoMaximo() {
+        return TAMAÑO_MAXIMO_DE_Ceres ;
+    }
 
-    //abstract int obtenerConsumoPorMovimiento();
+    /**
+    /**
+     * {@link #tamaño}
+     * 
+     * @return el tamaño del Asteroide
+     */
+    public int obtenerTamaño() {
+        return this.tamaño;
+    }
+
+   
 }
+
