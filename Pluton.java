@@ -1,5 +1,4 @@
-//implementacion del planeta Pluton
-
+//implementacion del planeta Pluton, se mata con 2 ataques
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -8,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Pluton extends ActorBase
+public class Pluton extends ActorBase implements Dañable
 {
     /**
      * {@value #COMBUSTIBLE_CONTENIDO}
@@ -18,13 +17,22 @@ public class Pluton extends ActorBase
     private double ESCALA_X = 0.9;
     private double ESCALA_Y = 0.9;
     protected int vida;
+    protected static final int TAMAÑO_MINIMO_DE_Pluton = 10;
+    protected static final int TAMAÑO_MAXIMO_DE_Pluton= 100;
+    
+    protected int tamaño;
 
     public Pluton() {
-        this.vida = 51 + (int) (Math.random() * 50);
+        this.vida = 20 + (int) (Math.random() * 50);
     }
 
-    public Pluton(int vida) {
-        this.vida = vida;
+  /**
+     * Inicializa un Asteroiode con tamaño arbitrario, en el rango de 10 a
+     * {@value #TAMAÑO_MAXIMO_DE_ASTEROIDE} puntos
+     * 
+     * @param tamañoInicial
+     */public Pluton(int tamañoInicial) {
+        this.tamaño = Math.max(TAMAÑO_MINIMO_DE_Pluton , Math.min(TAMAÑO_MAXIMO_DE_Pluton , tamañoInicial));
     }
 
     /**
@@ -40,7 +48,7 @@ public class Pluton extends ActorBase
         image.scale(ancho, ancho);
         setImage(image);
 
-        GreenfootImage Pluton = getImage();
+        GreenfootImage barrera = getImage();
         image.scale((int) (tamCelda * ESCALA_X), (int) (tamCelda * ESCALA_Y));
         setImage(image);
     }
@@ -87,8 +95,24 @@ public class Pluton extends ActorBase
         actualizarImagen();
     }
 
+   
+    /**
+     * {@value #TAMAÑO_MAXIMO_DE_ASTEROIDE}
+     * 
+     * @return el tamaño máximo que puede tener un Asteroide
+     */
     protected int obtenerTamañoMaximo() {
-        return 100;
+        return TAMAÑO_MAXIMO_DE_Pluton ;
     }
 
+     /**
+
+    /**
+     * {@link #tamaño}
+     * 
+     * @return el tamaño del Asteroide
+     */
+    public int obtenerTamaño() {
+        return this.tamaño;
+    }
 }
