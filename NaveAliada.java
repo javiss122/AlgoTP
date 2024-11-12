@@ -9,6 +9,7 @@ public abstract class NaveAliada extends NaveBase {
      * El combustible de la NaveAliada. Toda acción insume combustible
      */
     protected int combustible;
+    private boolean ceresCombustibleInfinito = false;
 
     /**
      * Inicializa una NaveAliada con el {@link #obtenerCombustibleMaximo()}
@@ -17,7 +18,14 @@ public abstract class NaveAliada extends NaveBase {
         super();
         this.combustible = obtenerCombustibleMaximo();
     }
-
+    //agregado para planeta ceres
+    public void activarCombustibleInfinito() {
+        ceresCombustibleInfinito = true;
+    }
+    // este metodo se utiliza para remover el debuff aunque actualmente no hay una implementacion activa de el
+    public void desactivarCombustibleInfinito() {
+        ceresCombustibleInfinito = false;
+    }
     /**
      * Punto de extensión para obtener el combustible máximo para un tipo de
      * NaveAliada
@@ -147,14 +155,26 @@ public abstract class NaveAliada extends NaveBase {
      */
     @Override
     protected boolean moverHacia(Direccion direccion) {
-        if (!puedeActuar() || this.combustible < obtenerConsumoPorMovimiento()) {
-            return false;
-        }
-        if (!super.moverHacia(direccion)) {
-            return false;
-        }
+        //esta logica se encarga de verificar si el buff de combustible infinito se encuentra activo. Si es asi mueve la nave y mantiene el combustible al maximo.
+        if (ceresCombustibleInfinito) {
+            if (!super.moverHacia(direccion)) {
+                return false;
+            }
+            this.combustible = obtenerCombustibleMaximo();
 
-        consumirCombustible(obtenerConsumoPorMovimiento());
+        
+        
+        } 
+        else {
+
+            if (!puedeActuar() || this.combustible < obtenerConsumoPorMovimiento()) {
+                return false;
+            }
+            if (!super.moverHacia(direccion)) {
+                return false;
+            }
+    
+            consumirCombustible(obtenerConsumoPorMovimiento());}
 
         Item item = (Item) getOneObjectAtOffset(0, 0, Item.class);
         portal portalito = (portal) getWorld().getObjects(portal.class).get(0);

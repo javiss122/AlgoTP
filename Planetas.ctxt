@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Planetas
+comment0.text=\r\n\ Un\ Planetas\ es\ un\ obst\u00E1culo\ que\ puede\ ser\ destruido\ por\ una\r\n\ {@link\ NaveDeAtaque}.\ Esto\ llevar\u00E1\ una\ cierta\ cantidad\ de\ ataques\r\n
+comment1.params=
+comment1.target=Planetas()
+comment2.params=tama\u00F1o
+comment2.target=Planetas(int)
+comment2.text=\r\n\ Inicializa\ un\ Asteroiode\ con\ tama\u00F1o\ arbitrario,\ en\ el\ rango\ de\ 10\ a\r\n\ {@value\ \#TAMA\u00D1O_MAXIMO_DE_ASTEROIDE}\ puntos\r\n\ \r\n\ @param\ tama\u00F1oInicial\r\n
+comment3.params=atacante
+comment3.target=void\ recibirDa\u00F1oDe(Atacante)
+comment3.text=\r\n\ post\:\ el\ Planetas\ reducir\u00E1\ su\ tama\u00F1o\ conforme\ la\ potencia\ del\ ataque.\ <br>\r\n\ post\:\ el\ Planetas\ ser\u00E1\ eliminado\ del\ tablero\ si\ su\ tama\u00F1o\ llega\ a\ 0.\ <br>\r\n\ \r\n\ @see\ Da\u00F1able\#recibirDa\u00F1oDe(Atacante)\r\n
+comment4.params=
+comment4.target=void\ actualizarImagen()
+comment4.text=\r\n\ {@inheritDoc}\r\n
+comment5.params=
+comment5.target=int\ obtenerTama\u00F1o()
+comment5.text=\r\n\ {@link\ \#tama\u00F1o}\r\n\ \r\n\ @return\ el\ tama\u00F1o\ del\ Planetas\r\n
+numComments=6
