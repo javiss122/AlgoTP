@@ -1,4 +1,5 @@
-//implementacion del planeta Eris
+//implementacion del planeta Eris, se mata con 3 ataques
+
 //Falta implementar la recompensa
 
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
