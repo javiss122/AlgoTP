@@ -1,0 +1,64 @@
+//con la victoria 
+
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class runner here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class runner extends NaveEnemiga 
+{
+    private int salud;
+    public runner(Direccion direccion) {
+        super(direccion);
+        this.salud = 100; // Salud inicial
+    }
+
+    public void reaccionarAlMoverse() {
+
+        System.out.println("La nave enemiga se ha movido.");
+
+    }
+    // AGREGADO PARA LA NAVE RUNNER
+    public void muevelo() {
+        // Define movimiento de la nave
+        int numero = (int) (Math.random() * 4);
+        if (numero == 0){ 
+            moverHacia(Direccion.NORTE); 
+        }
+        else if (numero == 1){
+            moverHacia(Direccion.SUR); 
+        }
+        else if (numero == 2){
+            moverHacia(Direccion.ESTE); 
+
+        }
+        else {
+            moverHacia(Direccion.OESTE); 
+
+        }
+
+    }
+
+   
+   
+    public void Victoria() {
+        if(this.salud == 0){
+            System.out.println("¡Victoria! Has destruido a la nave enemiga.");
+            Victoria cartel = new Victoria();
+            getWorld().addObject(cartel, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+
+        }
+
+        // Crear y agregar el cartel de victoria al mundo
+        Victoria cartel = new Victoria();
+        getWorld().addObject(cartel, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+
+        // Detener el juego si lo deseas
+        Greenfoot.stop(); // Opcional, si quieres detener el juego después de mostrar el cartel
+    }
+
+}
+    
