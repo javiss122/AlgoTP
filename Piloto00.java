@@ -38,6 +38,15 @@ public class Piloto00 extends PilotoBase {
         }
         return ataques;
     }
+    void atacarHacia(NaveDeAtaque nave, Direccion direccion) {
+        subirse(nave);
+        nave.encenderMotores();
+        nave.atacarHacia(direccion);
+        nave.atacarHacia(direccion);
+        nave.atacarHacia(direccion);
+        }
+        
+    
 
     void llegarALaBaseNorte() {
         avanzarAlNortePor(5);
